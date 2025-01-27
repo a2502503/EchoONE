@@ -1,2 +1,4 @@
 # EchoONE
-The author is a bit lazy and will release the code later.
+EchoONE: Segmenting Multiple echocardiography Planes in One Model  
+Overview of our model: 
+![image](https://github.com/a2502503/EchoONE/blob/main/over%20view.png)
