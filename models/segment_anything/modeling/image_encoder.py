@@ -69,9 +69,6 @@ class ImageEncoderViT(nn.Module):
             self.pos_embed = nn.Parameter(
                 torch.zeros(1, img_size // patch_size, img_size // patch_size, embed_dim)
             )
-            # self.pos_embed = nn.Parameter(
-            #     torch.zeros(1, img_size // 64, img_size // 64, embed_dim)
-            # )
 
         self.blocks = nn.ModuleList()
         for i in range(depth):
