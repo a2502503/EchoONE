@@ -226,7 +226,7 @@ class PromptEncoder(nn.Module):
 
         coarse_mask_logit = self.cls_sim_avg_label_conv_last(dec1)
         low_coarse_mask_logit = F.interpolate(coarse_mask_logit, (128, 128), mode="bilinear", align_corners=False)
-        low_coarse_mask = torch.where(low_coarse_mask_logit > 0.5, 1, 0)
+        low_coarse_mask = torch.where(low_coarse_mask_logit > 0, 1, 0)
 
         if coarse_mask_logit is not None:
             dense_embeddings = self._embed_masks(low_coarse_mask.float())
